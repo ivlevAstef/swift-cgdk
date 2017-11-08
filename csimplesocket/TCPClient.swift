@@ -118,6 +118,16 @@ public extension TCPClient {
 	
 	
 	
+	public func readFloat() -> Float32 {
+		return fromByteArray(toByteArray(readInt32())) as Float32
+ 	}
+  
+	public func write(float value: Float32) {
+		write(int32: fromByteArray(toByteArray(value)) as Int32)
+	}
+	
+	
+	
 	public func readByteArray() -> [Byte] {
 		let count = readInt()
 		if count <= 0 {
