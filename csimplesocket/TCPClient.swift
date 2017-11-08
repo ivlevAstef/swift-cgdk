@@ -79,6 +79,16 @@ public extension TCPClient {
 	
 	
 	
+	public func readShort() -> Int16 {
+		return Int16(littleEndian: fromByteArray(readBytes(MemoryLayout<Int16>.size)))
+	}
+  
+	public func write(short value: Int16) {
+		write(bytes: toByteArray(value.littleEndian))
+	}
+	
+	
+	
 	public func readInt32() -> Int32 {
 		return Int32(littleEndian: fromByteArray(readBytes(MemoryLayout<Int32>.size)))
 	}
