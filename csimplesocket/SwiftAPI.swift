@@ -2,6 +2,7 @@
 @_silgen_name("swift_api_exit") func c_exit()
 
 @_silgen_name("swift_api_rand") func rand32() -> Int32
+@_silgen_name("swift_api_srand") func srand(_ value: UInt)
 
 /// math
 @_silgen_name("swift_api_sqrt") func sqrt(_ value: Double) -> Double

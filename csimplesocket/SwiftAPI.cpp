@@ -29,6 +29,10 @@ extern "C" {
 	int swift_api_rand() {
 		return rand();
 	}
+
+	void swift_api_srand(unsigned int value) {
+		srand(value);
+	}
 	
 	double swift_api_sqrt(double value) {
 		return sqrt(value);
