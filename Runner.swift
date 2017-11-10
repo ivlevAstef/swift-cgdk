@@ -10,7 +10,7 @@ public final class Runner {
 	public func run() {
 		
 		remoteProcessClient.write(token: token)
-		remoteProcessClient.write(protocolVersion: ())
+		remoteProcessClient.write(protocolVersion: 2)
 		
 		_ = remoteProcessClient.readTeamSize()
 		let game = remoteProcessClient.readGameContext()

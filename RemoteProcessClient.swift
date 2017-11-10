@@ -38,9 +38,9 @@ public class RemoteProcessClient {
 		tc.write(string: token)
 	}
 	
-	public func write(protocolVersion: Void) {
+	public func write(protocolVersion: Int) {
 		tc.write(enum: MessageType.protocolVersion)
-		tc.write(int: 1)
+		tc.write(int: protocolVersion)
 	}
 	
 	public func readTeamSize() -> Int {
@@ -218,6 +218,7 @@ extension RemoteProcessClient {
 		tc.write(double: move.x)
 		tc.write(double: move.y)
 		tc.write(double: move.angle)
+	  tc.write(double: move.factor)
 		tc.write(double: move.maxSpeed)
 		tc.write(double: move.maxAngularSpeed)
 		tc.write(enum: move.vehicleType)
