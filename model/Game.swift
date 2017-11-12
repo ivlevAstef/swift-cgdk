@@ -88,4 +88,9 @@ public struct Game {
 	let facilityCapturePointsPerVehiclePerTick: Double
 	let facilityWidth: Double
 	let facilityHeight: Double
+  let baseTacticalNuclearStrikeCooldown: Int
+  let tacticalNuclearStrikeCooldownDecreasePerControlCenter:Int
+  let maxTacticalNuclearStrikeDamage:Double
+  let tacticalNuclearStrikeRadius:Double
+  let tacticalNuclearStrikeDelay: Int
 }

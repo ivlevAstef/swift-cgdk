@@ -202,7 +202,12 @@ extension RemoteProcessClient {
 			maxFacilityCapturePoints: tc.readDouble(),
 			facilityCapturePointsPerVehiclePerTick: tc.readDouble(),
 			facilityWidth: tc.readDouble(),
-			facilityHeight: tc.readDouble()
+			facilityHeight: tc.readDouble(),
+      baseTacticalNuclearStrikeCooldown: tc.readInt(),
+      tacticalNuclearStrikeCooldownDecreasePerControlCenter:tc.readInt(),
+      maxTacticalNuclearStrikeDamage: tc.readDouble(),
+      tacticalNuclearStrikeRadius: tc.readDouble(),
+      tacticalNuclearStrikeDelay: tc.readInt()
 		)
 	}
 	
@@ -223,6 +228,7 @@ extension RemoteProcessClient {
 		tc.write(double: move.maxAngularSpeed)
 		tc.write(enum: move.vehicleType)
 		tc.write(long: move.facilityId)
+    tc.write(long:move.vehicleId);
 	}
 	
 	fileprivate func readModelPlayer() -> Player {
@@ -240,7 +246,12 @@ extension RemoteProcessClient {
 			me: tc.readBool(),
 			strategyCrashed: tc.readBool(),
 			score: tc.readInt(),
-			remainingActionCooldownTicks: tc.readInt()
+			remainingActionCooldownTicks: tc.readInt(),
+      remainingNuclearStrikeCooldownTicks: tc.readInt(),
+      nextNuclearStrikeVehicleId: tc.readLong(),
+      nextNuclearStrikeTickIndex:tc.readInt(),
+      nextNuclearStrikeX: tc.readDouble(),
+      nextNuclearStrikeY: tc.readDouble()
 		)
 		previousPlayerById[player.id] = player
 		return player
