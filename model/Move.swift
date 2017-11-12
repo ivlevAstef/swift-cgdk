@@ -13,6 +13,7 @@ public class Move { // это именно класс - чтобы можно б
   var maxAngularSpeed: Double = 0.0
   var vehicleType: VehicleType = .unknown
   var facilityId: Int64 = -1
+  var vehicleId: Int64 = -1
 
   public init() {}
 }

@@ -11,4 +11,5 @@ public enum ActionType: Int8, RawByteRepresentable {
   case rotate = 8
   case scale = 9
   case setupVehicleProduction = 10
+  case tacticalNuclearStrike = 11
 }
