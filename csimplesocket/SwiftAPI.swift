@@ -22,10 +22,10 @@
 
 
 func c_exit(_ msg: String) {
-	print(msg)
-	c_exit()
+  print(msg)
+  c_exit()
 }
 
 func rand() -> Int {
-	return Int(rand32())
+  return Int(rand32())
 }
