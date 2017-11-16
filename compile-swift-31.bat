@@ -13,9 +13,9 @@ call clean.bat
 
 set COMPILER_PATH="
 
-if "%GCC6_HOME%" neq "" (
-    if exist "%GCC6_HOME%\bin\g++.exe" (
-        set COMPILER_PATH="%GCC6_HOME%\bin\"
+if "%GCC_SWIFT_HOME%" neq "" (
+    if exist "%GCC_SWIFT_HOME%\bin\g++.exe" (
+        set COMPILER_PATH="%GCC_SWIFT_HOME%\bin\"
     )
 )
 
@@ -49,4 +49,4 @@ for %%i in (*.o) do (
 	set FILES=!FILES! %%i
 )
 
-swiftc !FILES! -L ./csimplesocket/ -lstdc++ -Ounchecked -lws2_32 -o %name%.exe -Xlinker --allow-multiple-definition -Xlinker --subsystem -Xlinker windows 2>compilation.log
+swiftc !FILES! -L ./csimplesocket/ -lstdc++ -Ounchecked -lws2_32 -o %name%.exe -Xlinker --allow-multiple-definition -Xlinker --subsystem -Xlinker windows -Xlinker -O2 2>compilation.log
