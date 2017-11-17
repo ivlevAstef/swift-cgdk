@@ -21,7 +21,12 @@ if "%SWIFT_HOME%" neq "" (
     :: в принципе он всеравно должен найтись и без пути
     if exist "%SWIFT_HOME%\Swift\usr\bin\swiftc.exe" (
         set COMPILER_SWIFT_PATH="%SWIFT_HOME%\Swift\usr\bin\"
-    }
+    )
+
+    :: установка путей окружения
+    if exits "%SWIFT_HOME%\Swift\setPath.bat" (
+        call %SWIFT_HOME%\Swift\setPath.bat
+    )
 )
 
 SetLocal EnableDelayedExpansion EnableExtensions
