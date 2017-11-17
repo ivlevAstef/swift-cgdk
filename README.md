@@ -1,7 +1,8 @@
 # Инструкция по установки swift на windows
 Перед установкой обязательно установить MinGW-64, так как без него работать не будет. архитектуру при установке следует выбрать: `x86_64` потоки `win32` исключения `seh`. Версию можно скорей всего выбрать любую, но я ставил `7.2.0`.
-Скачать mingw можно отсюда: https://sourceforge.net/projects/mingw-w64/
-После чего надо прописать переменную окружения `GCC_SWIFT_HOME` = `C:\Program Files\mingw-w64\x86_64-7.2.0-win32-seh-rt_v5-rev0\mingw64`.
+Скачать mingw можно отсюда: `https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/7.2.0/threads-win32/seh/`
+После чего надо прописать переменную окружения `SWIFT_HOME` = `C:\`. если вы установили mingw64 в корень.
+В идеале если папка со swift и папка с mingw64 находились в одной директории: `%SWIFT_HOME%\Swift` и `%SWIFT_HOME%/mingw64`
 
 
 Чтобы установить нв windows7 swift3.1 нужно:
