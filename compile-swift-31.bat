@@ -24,7 +24,7 @@ if "%SWIFT_HOME%" neq "" (
     )
 
     :: установка путей окружения
-    if exits "%SWIFT_HOME%\Swift\setPath.bat" (
+    if exist "%SWIFT_HOME%\Swift\setPath.bat" (
         call %SWIFT_HOME%\Swift\setPath.bat
     )
 )
